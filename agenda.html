@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agenda &amp; tournée — Dates de représentation | Théâtre de l'eau qui dort</title>
+  <meta name="description" content="Agenda et dates de tournée du spectacle de la compagnie Théâtre de l'eau qui dort : représentations à venir dans les théâtres, festivals et centres culturels. Réservez vos places." />
+  <link rel="canonical" href="https://theatredeleauquidort.fr/agenda.html" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Agenda &amp; tournée — Théâtre de l'eau qui dort" />
+  <meta property="og:description" content="Toutes les dates de tournée du spectacle en cours." />
+  <meta property="og:url" content="https://theatredeleauquidort.fr/agenda.html" />
+  <meta property="og:image" content="https://theatredeleauquidort.fr/assets/img/og-image.svg" />
+  <meta property="og:locale" content="fr_FR" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <meta name="theme-color" content="#0c0b10" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- JSON-LD : liste d'événements (À METTRE À JOUR à chaque date) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "TheaterEvent",
+        "name": "Le Titre du Spectacle — Théâtre de la Ville",
+        "startDate": "2026-09-18T20:30",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": { "@type": "Place", "name": "Théâtre de la Ville", "address": "Ville, France" },
+        "performer": { "@type": "PerformingGroup", "name": "Théâtre de l'eau qui dort" },
+        "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "url": "https://theatredeleauquidort.fr/agenda.html" }
+      },
+      {
+        "@type": "TheaterEvent",
+        "name": "Le Titre du Spectacle — Festival Exemple",
+        "startDate": "2026-10-04T19:00",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": { "@type": "Place", "name": "Festival Exemple", "address": "Ville, France" },
+        "performer": { "@type": "PerformingGroup", "name": "Théâtre de l'eau qui dort" }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html" aria-label="Accueil"><img class="brand__mark" src="assets/img/logo.svg" alt="" width="34" height="34" /><span class="brand__name">Théâtre de l'eau qui dort<span>Compagnie</span></span></a>
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+      <nav class="nav" id="nav" aria-label="Navigation principale">
+        <a href="spectacle.html">Spectacle</a>
+        <a href="agenda.html" aria-current="page">Agenda</a>
+        <a href="photos.html">Photos</a>
+        <a href="actualite.html">Actualité</a>
+        <a href="presse.html">Presse</a>
+        <a href="equipe.html">Équipe</a>
+        <a href="contact.html">Contact</a>
+        <a class="nav-cta" href="diffusion.html">Espace pro</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Fil d'ariane"><a href="index.html">Accueil</a><span>›</span> Agenda</nav>
+        <span class="eyebrow">Tournée 2026 — 2027</span>
+        <h1>Agenda &amp; tournée</h1>
+        <p>Toutes les représentations du spectacle. Une date près de chez vous ? Réservez vos places auprès du lieu.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="agenda-filters" role="tablist" aria-label="Filtrer les dates">
+          <button class="filter-btn is-active" data-filter="all">Toutes</button>
+          <button class="filter-btn" data-filter="open">À venir</button>
+          <button class="filter-btn" data-filter="past">Passées</button>
+        </div>
+
+        <!-- À REMPLACER : vraies dates. data-status = open | soldout | past -->
+        <div class="date-row" data-status="open">
+          <div class="date-row__date"><span class="day">18</span><span class="month">Sept.</span> <span class="year">2026</span></div>
+          <div class="date-row__info"><h3>Théâtre de la Ville — Exemple</h3><p>Ville (00) · 20h30 · Salle principale</p></div>
+          <span class="date-row__status status--open">Réserver</span>
+        </div>
+        <div class="date-row" data-status="soldout">
+          <div class="date-row__date"><span class="day">04</span><span class="month">Oct.</span> <span class="year">2026</span></div>
+          <div class="date-row__info"><h3>Festival Exemple</h3><p>Ville (00) · 19h00</p></div>
+          <span class="date-row__status status--soldout">Complet</span>
+        </div>
+        <div class="date-row" data-status="open">
+          <div class="date-row__date"><span class="day">22</span><span class="month">Nov.</span> <span class="year">2026</span></div>
+          <div class="date-row__info"><h3>Centre culturel — Exemple</h3><p>Ville (00) · 20h00</p></div>
+          <span class="date-row__status status--open">Réserver</span>
+        </div>
+        <div class="date-row" data-status="open">
+          <div class="date-row__date"><span class="day">10</span><span class="month">Janv.</span> <span class="year">2027</span></div>
+          <div class="date-row__info"><h3>Scène nationale — Exemple</h3><p>Ville (00) · 20h30</p></div>
+          <span class="date-row__status status--open">Réserver</span>
+        </div>
+        <div class="date-row" data-status="past">
+          <div class="date-row__date"><span class="day">12</span><span class="month">Mars</span> <span class="year">2026</span></div>
+          <div class="date-row__info"><h3>Création — Théâtre Exemple</h3><p>Ville (00) · Première</p></div>
+          <span class="date-row__status status--past">Passée</span>
+        </div>
+
+        <div class="pro-banner reveal mt-3" style="margin-top:3.5rem;">
+          <div class="split">
+            <div>
+              <span class="eyebrow">Vous êtes programmateur ?</span>
+              <h2>Ajoutez une date à la tournée</h2>
+              <p class="mt-2">Vérifions ensemble les disponibilités du spectacle sur votre saison.</p>
+            </div>
+            <div style="display:flex; align-items:center;"><a class="btn btn--primary" href="contact.html">Demander une date <span class="btn__arrow">→</span></a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about"><a class="brand" href="index.html"><img class="brand__mark" src="assets/img/logo.svg" alt="" width="34" height="34" /><span class="brand__name">Théâtre de l'eau qui dort<span>Compagnie</span></span></a><p>Compagnie de théâtre contemporain. Création et diffusion de spectacles vivants en tournée.</p></div>
+        <div><h4>Explorer</h4><nav aria-label="Pied de page"><a href="spectacle.html">Spectacle</a><a href="agenda.html">Agenda</a><a href="photos.html">Photos</a><a href="actualite.html">Actualité</a></nav></div>
+        <div><h4>Professionnels</h4><nav><a href="presse.html">Presse</a><a href="equipe.html">Équipe</a><a href="diffusion.html">Espace pro</a><a href="contact.html">Contact</a></nav></div>
+        <div><h4>Diffusion</h4><ul><li><a href="mailto:diffusion@theatredeleauquidort.fr">diffusion@theatredeleauquidort.fr</a></li><li><a href="tel:+33000000000">+33 (0)0 00 00 00 00</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© <span data-year>2026</span> Théâtre de l'eau qui dort · Licences d'entrepreneur du spectacle n° 0000000</span><span><a href="mentions-legales.html">Mentions légales</a></span></div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

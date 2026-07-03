@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bash \"C:/Users/Laetitia/AppData/Local/Temp/claude/C--Users-Laetitia-Desktop-Th-atre-eau-qui-dort/135a84bf-ae9b-4e07-8b4f-0111b7fd1fb0/scratchpad/gen-img.sh\")",
+      "Bash(bash \"C:/Users/Laetitia/AppData/Local/Temp/claude/C--Users-Laetitia-Desktop-Th-atre-eau-qui-dort/135a84bf-ae9b-4e07-8b4f-0111b7fd1fb0/scratchpad/gen-pdf.sh\")",
+      "Bash(git --version)",
+      "Bash(gh --version)",
+      "Bash(gh auth *)",
+      "Bash(git init *)",
+      "Bash(git config *)",
+      "Bash(git branch *)",
+      "Bash(git add *)",
+      "Bash(git -c core.autocrlf=true commit -q -m 'Site vitrine — Théâtre de l'\\\\''eau qui dort *)",
+      "Bash(git credential-manager *)",
+      "Bash(git credential-manager-core *)"
+    ]
+  }
+}

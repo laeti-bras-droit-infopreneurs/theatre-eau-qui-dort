@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-label="Théâtre de l'eau qui dort">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e6c983"/>
+      <stop offset="1" stop-color="#c8a24c"/>
+    </linearGradient>
+  </defs>
+  <!-- goutte -->
+  <path d="M24 6 C24 6 34 19 34 27 a10 10 0 0 1 -20 0 C14 19 24 6 24 6 Z"
+        fill="none" stroke="url(#g)" stroke-width="2"/>
+  <!-- ondulations (eau qui dort) -->
+  <g stroke="url(#g)" stroke-width="1.6" fill="none" stroke-linecap="round">
+    <path d="M8 38 q4 -4 8 0 t8 0 t8 0 t8 0" opacity="0.9"/>
+    <path d="M10 43 q3.5 -3.5 7 0 t7 0 t7 0" opacity="0.5"/>
+  </g>
+  <circle cx="24" cy="25" r="2.2" fill="url(#g)"/>
+</svg>

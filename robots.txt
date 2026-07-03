@@ -1,0 +1,25 @@
+# robots.txt — Théâtre de l'eau qui dort
+User-agent: *
+Allow: /
+
+# Bots des moteurs génératifs (GEO) — explicitement autorisés
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://theatredeleauquidort.fr/sitemap.xml
