@@ -6,16 +6,28 @@
     "image": "assets/img/hero-le-premier-homme.jpg",
     "imageAlt": "Portrait d'Albert Camus — visuel du spectacle Le Premier Homme © IZIS Bidermanas / Roger-Viollet",
     "metas": [
-      { "label": "D'après", "valeur": "Albert Camus" },
-      { "label": "Mise en scène", "valeur": "Patrick Roldez" },
-      { "label": "Avec", "valeur": "David Seigneur" },
-      { "label": "Genre", "valeur": "Seul en scène" }
+      {
+        "label": "D'après",
+        "valeur": "Albert Camus"
+      },
+      {
+        "label": "Mise en scène",
+        "valeur": "Patrick Roldez"
+      },
+      {
+        "label": "Avec",
+        "valeur": "David Seigneur"
+      },
+      {
+        "label": "Genre",
+        "valeur": "Seul en scène"
+      }
     ]
   },
   "troupe": {
     "surtitre": "La troupe",
     "titre": "Présentation de la compagnie",
-    "texte": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.\n\nProin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim.",
+    "texte": "testests",
     "image": "assets/img/affiche-le-premier-homme.jpg",
     "imageAlt": "Affiche du Premier Homme d'après Albert Camus — Le Petit Louvre, Avignon"
   },
@@ -28,8 +40,16 @@
     "surtitre": "La presse en parle",
     "titre": "Ils ont salué nos précédentes créations",
     "liste": [
-      { "texte": "« Éblouissante <em>Oleanna</em>. »", "media": "Le Figaro", "source": "— Nathalie Simon, à propos d'Oleanna de David Mamet" },
-      { "texte": "« C'est une langue de feu, un frisson de théâtre qui nous sont donnés. »", "media": "Les Trois Coups", "source": "— à propos de La Solitude des champs de coton de Koltès" }
+      {
+        "texte": "« Éblouissante <em>Oleanna</em>. »",
+        "media": "Le Figaro",
+        "source": "— Nathalie Simon, à propos d'Oleanna de David Mamet"
+      },
+      {
+        "texte": "« C'est une langue de feu, un frisson de théâtre qui nous sont donnés. »",
+        "media": "Les Trois Coups",
+        "source": "— à propos de La Solitude des champs de coton de Koltès"
+      }
     ]
   },
   "dates": {
