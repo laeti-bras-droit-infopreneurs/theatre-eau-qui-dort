@@ -1,0 +1,15 @@
+{
+  "intro": "Dossier de presse à télécharger et contact presse de la compagnie.",
+  "dossier": {
+    "surtitre": "À télécharger",
+    "titre": "Dossier de presse",
+    "texte": "« Le Premier Homme », d'après Albert Camus — adaptation et mise en scène Patrick Roldez, avec David Seigneur. Au Festival OFF d'Avignon 2026, Le Petit Louvre, salle Van Gogh, du 4 au 25 juillet à 21h05.",
+    "carteTitre": "Dossier de presse — Le Premier Homme",
+    "carteMeta": "PDF · 665 Ko",
+    "note": "Visuel de couverture : © IZIS Bidermanas / Roger-Viollet. Des photographies de scène actualisées seront prochainement disponibles."
+  },
+  "revue": {
+    "titre": "La presse sur nos spectacles",
+    "texte": "Le Figaro, Libération, Le Canard enchaîné, Politis, Le Parisien, La Provence… Retrouvez les citations presse de nos précédentes créations."
+  }
+}

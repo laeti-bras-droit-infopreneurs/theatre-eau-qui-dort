@@ -1,0 +1,68 @@
+{
+  "hero": {
+    "surtitre": "Cie l'eau qui dort · Festival OFF d'Avignon 2026",
+    "titre": "« Le Premier Homme »",
+    "accroche": "D'après Albert Camus — sous les traits de Jacques Cormery, l'enquête d'un fils sur les traces de son père mort à la guerre. Un seul en scène solaire et bouleversant.",
+    "image": "assets/img/hero-le-premier-homme.jpg",
+    "imageAlt": "Portrait d'Albert Camus — visuel du spectacle Le Premier Homme © IZIS Bidermanas / Roger-Viollet",
+    "metas": [
+      { "label": "D'après", "valeur": "Albert Camus" },
+      { "label": "Mise en scène", "valeur": "Patrick Roldez" },
+      { "label": "Avec", "valeur": "David Seigneur" },
+      { "label": "Genre", "valeur": "Seul en scène" }
+    ]
+  },
+  "troupe": {
+    "surtitre": "La troupe",
+    "titre": "Présentation de la compagnie",
+    "texte": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.\n\nProin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim.",
+    "image": "assets/img/affiche-le-premier-homme.jpg",
+    "imageAlt": "Affiche du Premier Homme d'après Albert Camus — Le Petit Louvre, Avignon"
+  },
+  "histoire": {
+    "surtitre": "Notre histoire",
+    "titre": "D'où vient l'eau qui dort",
+    "texte": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.\n\nAenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.\n\nDonec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium."
+  },
+  "citations": {
+    "surtitre": "La presse en parle",
+    "titre": "Ils ont salué nos précédentes créations",
+    "liste": [
+      { "texte": "« Éblouissante <em>Oleanna</em>. »", "media": "Le Figaro", "source": "— Nathalie Simon, à propos d'Oleanna de David Mamet" },
+      { "texte": "« C'est une langue de feu, un frisson de théâtre qui nous sont donnés. »", "media": "Les Trois Coups", "source": "— à propos de La Solitude des champs de coton de Koltès" }
+    ]
+  },
+  "dates": {
+    "surtitre": "Agenda",
+    "titre": "Prochaines représentations",
+    "liste": [
+      {
+        "jour": "4→25",
+        "mois": "Juillet",
+        "annee": "2026",
+        "lieu": "Festival OFF d'Avignon — Le Petit Louvre, salle Van Gogh",
+        "details": "23 rue Saint-Agricole, Avignon · 21h05 · relâche les jeudis 9, 16 et 23 · réservations 04 32 76 02 79",
+        "statut": "Places disponibles",
+        "statutType": "open"
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "« Le Premier Homme » est-il disponible en tournée ?",
+      "reponse": "Oui. Le spectacle est joué au Festival OFF d'Avignon 2026 (Le Petit Louvre, du 4 au 25 juillet) et est en diffusion pour les saisons 2026-2027. Contactez la diffusion au 06 10 74 04 92 pour vérifier les disponibilités."
+    },
+    {
+      "question": "Quelle est la configuration nécessaire ?",
+      "reponse": "« Le Premier Homme » est un seul en scène au dispositif léger, adapté aux salles de toutes jauges. Contactez la compagnie pour recevoir la fiche technique."
+    },
+    {
+      "question": "Qui a créé ce spectacle ?",
+      "reponse": "L'adaptation et la mise en scène sont de Patrick Roldez, l'interprétation de David Seigneur. Scénographie Charlotte Maurel, costumes Valérie Weiss, lumières Alexandre Dujardin, musiques David Georgelin."
+    },
+    {
+      "question": "Comment obtenir un devis de diffusion ?",
+      "reponse": "Écrivez à [diffusion@theatredeleauquidort.fr](mailto:diffusion@theatredeleauquidort.fr) ou via le formulaire de contact. Nous répondons sous 48h ouvrées avec un devis personnalisé."
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+---
+title: "Presse — Contact presse & dossier de presse | Théâtre de l'eau qui dort"
+description: "Espace presse du Théâtre de l'eau qui dort : dossier de presse du Premier Homme (d'après Albert Camus) à télécharger. Contact presse : Catherine Guizard, La Strada & Cies — 06 60 43 21 13."
+canonical: presse.html
+ogTitle: "Presse — Théâtre de l'eau qui dort"
+ogDescription: "Dossier de presse du Premier Homme à télécharger et contact presse."
+navCurrent: presse
+permalink: presse.html
+---
+{% extends "base.njk" %}
+
+{% block content %}
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Fil d'ariane"><a href="index.html">Accueil</a><span>›</span> Presse</nav>
+        <span class="eyebrow">Journalistes &amp; médias</span>
+        <h1>Espace presse</h1>
+        <p>{{ presse.intro }}</p>
+      </div>
+    </section>
+
+    <!-- Dossier + contact presse -->
+    <section>
+      <div class="container split" style="align-items:start;">
+        <div class="reveal">
+          <span class="eyebrow">{{ presse.dossier.surtitre }}</span>
+          <h2 class="mb-2">{{ presse.dossier.titre }}</h2>
+          <p class="mb-2">{{ presse.dossier.texte }}</p>
+          <a class="download-card mb-2" href="{{ reglages.dossierPresse }}" download>
+            <span class="download-card__icon" aria-hidden="true">⤓</span>
+            <span class="download-card__body"><h3>{{ presse.dossier.carteTitre }}</h3><p class="download-card__meta">{{ presse.dossier.carteMeta }}</p></span>
+          </a>
+          <p class="mt-2" style="color:var(--muted); font-size:0.95rem;">{{ presse.dossier.note }}</p>
+        </div>
+        <div class="reveal">
+          <span class="eyebrow">Contact presse</span>
+          <h2 class="mb-2">{{ reglages.presseStructure }}</h2>
+          <ul class="contact-info">
+            <li><span class="label">Attachée de presse</span><span>{{ reglages.presseNom }}</span></li>
+            <li><span class="label">Téléphone</span><span><a href="tel:{{ reglages.presseTelephoneLien }}">{{ reglages.presseTelephone }}</a></span></li>
+            <li><span class="label">Email</span><span><a href="mailto:{{ reglages.presseEmail }}">{{ reglages.presseEmail }}</a></span></li>
+          </ul>
+          <div class="pro-banner mt-3">
+            <h3 style="font-size:1.4rem;">{{ presse.revue.titre }}</h3>
+            <p class="mt-1">{{ presse.revue.texte }}</p>
+            <a class="btn btn--ghost mt-2" href="autres-spectacles.html">Voir la revue de presse <span class="btn__arrow">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container">
+        <span class="eyebrow" style="margin-inline:auto; display:block; width:fit-content;">Vous programmez ?</span>
+        <h2>Contactez la compagnie</h2>
+        <p>{{ reglages.contactNom }} vous répond directement pour toute demande de diffusion.</p>
+        <a class="btn btn--primary" href="contact.html">Prendre contact <span class="btn__arrow">→</span></a>
+      </div>
+    </section>
+{% endblock %}

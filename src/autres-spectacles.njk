@@ -1,0 +1,85 @@
+---
+title: "Autres spectacles — Oleanna & La Solitude des champs de coton | Théâtre de l'eau qui dort"
+description: "Les spectacles du répertoire de la compagnie Théâtre de l'eau qui dort : Oleanna de David Mamet et Dans la solitude des champs de coton de Koltès. Revue de presse : Le Figaro, Libération, Le Canard enchaîné, Politis, Le Parisien, La Provence…"
+canonical: autres-spectacles.html
+ogTitle: "Autres spectacles — Théâtre de l'eau qui dort"
+ogDescription: "Oleanna de David Mamet et Dans la solitude des champs de coton de Koltès : deux spectacles salués par la presse."
+ogImage: assets/img/oleanna-1.jpg
+navCurrent: autres
+permalink: autres-spectacles.html
+---
+{% extends "base.njk" %}
+
+{% block jsonld %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
+      { "@type": "ListItem", "position": 2, "name": "Autres spectacles", "item": "{{ site.url }}/autres-spectacles.html" }
+    ]
+  }
+  </script>
+{% endblock %}
+
+{% block content %}
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Fil d'ariane"><a href="index.html">Accueil</a><span>›</span> Autres spectacles</nav>
+        <span class="eyebrow">Le répertoire de la compagnie</span>
+        <h1>Autres spectacles</h1>
+        <p>{{ autres.intro | mdInline | safe }}</p>
+      </div>
+    </section>
+
+    {%- for s in autres.spectacles %}
+    <section{% if loop.index is odd %}{% else %} style="background:var(--ink-2); border-block:1px solid var(--line);"{% endif %}>
+      <div class="container split" style="align-items:start;">
+        <div class="reveal">
+          <span class="eyebrow">{{ s.surtitre }}</span>
+          <h2 class="mb-2">{{ s.titre }}</h2>
+          {{ s.description | md | safe }}
+          <div class="chips mt-3">
+            {%- for chip in s.chips %}
+            <span class="tag">{{ chip }}</span>
+            {%- endfor %}
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="grid grid--2">
+            {%- for p in s.photos %}
+            <div class="card"><div class="card__media"><img src="{{ p.image }}" alt="{{ p.alt }}" loading="lazy" /></div></div>
+            {%- endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="container mt-3">
+        <div class="section-head"><span class="eyebrow">La presse en parle</span><h2>{{ s.citationsTitre }}</h2></div>
+        <div class="grid grid--3">
+          {%- for c in s.citations %}
+          <div class="quote reveal"><blockquote>{{ c.texte }}</blockquote><cite>{{ c.media }} <span>{{ c.auteur }}</span></cite></div>
+          {%- endfor %}
+        </div>
+      </div>
+    </section>
+    {%- endfor %}
+
+    <!-- Également au répertoire -->
+    <section>
+      <div class="container container--narrow">
+        <span class="eyebrow">{{ autres.passees.surtitre }}</span>
+        <h2 class="mb-2">{{ autres.passees.titre }}</h2>
+        {{ autres.passees.texte | md | safe }}
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container">
+        <span class="eyebrow" style="margin-inline:auto; display:block; width:fit-content;">Aujourd'hui</span>
+        <h2>« Le Premier Homme », d'après Albert Camus</h2>
+        <p>La nouvelle création de la compagnie est en tournée — actuellement au Festival OFF d'Avignon.</p>
+        <a class="btn btn--primary" href="spectacle.html">Découvrir le spectacle <span class="btn__arrow">→</span></a>
+      </div>
+    </section>
+{% endblock %}

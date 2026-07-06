@@ -1,0 +1,147 @@
+---
+title: "« Le Premier Homme » d'après Albert Camus — Synopsis & distribution | Théâtre de l'eau qui dort"
+description: "Le Premier Homme, d'après Albert Camus : adaptation et mise en scène Patrick Roldez, avec David Seigneur. Synopsis, note d'intention, distribution. Seul en scène en tournée — Festival OFF d'Avignon 2026."
+canonical: spectacle.html
+ogType: article
+ogTitle: "« Le Premier Homme » d'après Albert Camus — Théâtre de l'eau qui dort"
+ogDescription: "Adaptation et mise en scène Patrick Roldez, avec David Seigneur. Synopsis, note d'intention et distribution."
+navCurrent: spectacle
+permalink: spectacle.html
+---
+{% extends "base.njk" %}
+
+{% block jsonld %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TheaterEvent",
+    "name": "Le Premier Homme",
+    "description": "Seul en scène d'après l'œuvre autofictionnelle d'Albert Camus. Adaptation et mise en scène Patrick Roldez, interprétation David Seigneur. Au Festival OFF d'Avignon 2026, Le Petit Louvre, salle Van Gogh, du 4 au 25 juillet à 21h05 (relâche les jeudis 9, 16 et 23).",
+    "image": "{{ site.url }}/assets/img/affiche-le-premier-homme.jpg",
+    "startDate": "2026-07-04T21:05:00+02:00",
+    "endDate": "2026-07-25T22:30:00+02:00",
+    "location": {
+      "@type": "PerformingArtsTheater",
+      "name": "Le Petit Louvre — salle Van Gogh",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "23 rue Saint-Agricole",
+        "addressLocality": "Avignon",
+        "postalCode": "84000",
+        "addressCountry": "FR"
+      }
+    },
+    "performer": { "@type": "Person", "name": "David Seigneur" },
+    "director": { "@type": "Person", "name": "Patrick Roldez" },
+    "organizer": {
+      "@type": "PerformingGroup",
+      "name": "Théâtre de l'eau qui dort",
+      "url": "{{ site.url }}/"
+    },
+    "workPerformed": {
+      "@type": "CreativeWork",
+      "name": "Le Premier Homme",
+      "author": { "@type": "Person", "name": "Albert Camus" }
+    },
+    "inLanguage": "fr",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "url": "{{ site.url }}/spectacle.html"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
+      { "@type": "ListItem", "position": 2, "name": "Le spectacle", "item": "{{ site.url }}/spectacle.html" }
+    ]
+  }
+  </script>
+{% endblock %}
+
+{% block content %}
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Fil d'ariane"><a href="index.html">Accueil</a><span>›</span> Le spectacle</nav>
+        <span class="eyebrow">{{ spectacle.surtitre }}</span>
+        <h1>{{ spectacle.titre }}</h1>
+        <p class="lead">{{ spectacle.epigraphe | mdInline | safe }}</p>
+      </div>
+    </section>
+
+    <!-- Visuel + intentions -->
+    <section>
+      <div class="container split">
+        <div class="feature-img reveal"><img src="{{ spectacle.affiche }}" alt="{{ spectacle.afficheAlt }}" width="800" height="1074" /></div>
+        <div class="reveal">
+          <span class="eyebrow">{{ spectacle.intentions.surtitre }}</span>
+          <p class="lead mb-2">{{ spectacle.intentions.accroche }}</p>
+          {{ spectacle.intentions.texte | md | safe }}
+          <div class="chips mt-3">
+            {%- for chip in spectacle.chips %}
+            <span class="tag">{{ chip }}</span>
+            {%- endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Note d'intention -->
+    <section style="background:var(--ink-2); border-block:1px solid var(--line);">
+      <div class="container container--narrow">
+        <span class="eyebrow">{{ spectacle.note.surtitre }}</span>
+        <h2 class="mb-2">{{ spectacle.note.titre }}</h2>
+        {{ spectacle.note.texte | md | safe }}
+        <p class="mt-2" style="font-family:var(--serif); font-style:italic; color:var(--gold);">{{ spectacle.note.signature }}</p>
+      </div>
+    </section>
+
+    <!-- Distribution + fiche technique -->
+    <section>
+      <div class="container split" style="align-items:start;">
+        <div class="reveal">
+          <span class="eyebrow">Distribution</span>
+          <h2 class="mb-2">Équipe artistique</h2>
+          <dl class="datalist">
+            {%- for d in spectacle.distribution %}
+            <div><dt>{{ d.poste }}</dt><dd>{{ d.nom }}</dd></div>
+            {%- endfor %}
+          </dl>
+        </div>
+        <div class="reveal">
+          <span class="eyebrow">Fiche technique</span>
+          <h2 class="mb-2">En un coup d'œil</h2>
+          <dl class="datalist">
+            {%- for f in spectacle.fiche %}
+            <div><dt>{{ f.label }}</dt><dd>{{ f.valeur }}</dd></div>
+            {%- endfor %}
+          </dl>
+          <a class="btn btn--primary mt-3" href="contact.html">Demander la fiche technique <span class="btn__arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- En ce moment -->
+    <section style="background:var(--ink-2); border-block:1px solid var(--line);">
+      <div class="container">
+        <div class="section-head"><span class="eyebrow">{{ spectacle.dates.surtitre }}</span><h2>{{ spectacle.dates.titre }}</h2></div>
+        {%- for d in spectacle.dates.liste %}
+        <div class="date-row">
+          <div class="date-row__date"><span class="day">{{ d.jour }}</span><span class="month">{{ d.mois }}</span> <span class="year">{{ d.annee }}</span></div>
+          <div class="date-row__info"><h3>{{ d.lieu }}</h3><p>{{ d.details }}</p></div>
+          <span class="date-row__status status--{{ d.statutType }}">{{ d.statut }}</span>
+        </div>
+        {%- endfor %}
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container">
+        <span class="eyebrow" style="margin-inline:auto; display:block; width:fit-content;">Diffusion</span>
+        <h2>Programmer ce spectacle</h2>
+        <p>Recevez le dossier complet et un devis adapté à votre lieu.</p>
+        <a class="btn btn--primary" href="contact.html">Contacter la compagnie <span class="btn__arrow">→</span></a>
+      </div>
+    </section>
+{% endblock %}

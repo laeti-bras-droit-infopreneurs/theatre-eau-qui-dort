@@ -1,0 +1,14 @@
+{
+  "name": "theatre-eau-qui-dort",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site vitrine du Théâtre de l'eau qui dort — généré avec Eleventy, administrable via Pages CMS",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "markdown-it": "^14.1.0"
+  }
+}

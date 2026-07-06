@@ -1,0 +1,52 @@
+{
+  "surtitre": "Seul en scène · D'après Albert Camus",
+  "titre": "« Le Premier Homme »",
+  "epigraphe": "« J'ai grandi dans la mer et la pauvreté m'a été fastueuse ; puis j'ai perdu la mer, tous les luxes alors m'ont paru gris, la misère intolérable. » — Albert Camus, *L'Été*, 1954",
+  "affiche": "assets/img/affiche-le-premier-homme.jpg",
+  "afficheAlt": "Affiche du Premier Homme d'après Albert Camus — portrait de Camus © IZIS Bidermanas / Roger-Viollet",
+  "intentions": {
+    "surtitre": "Les intentions",
+    "accroche": "Sous les traits d'un personnage nommé Jacques Cormery, Albert Camus retrace l'enquête qu'il a menée, dans les années 1950, sur les traces de son père mort à la bataille de la Marne.",
+    "texte": "Dans une langue simple et solaire, le texte, resté inachevé — le manuscrit fut retrouvé après l'accident de voiture qui coûta la vie à son auteur —, est, à la fois, un magnifique témoignage et du grain à moudre pour notre présent.\n\nDe Saint-Brieuc à Mondovi, en passant évidemment par Alger, la quête fait entendre de mémorables moments, mais elle révèle aussi un Camus confronté à ses « racines obscures et emmêlées ». Et la guerre d'Algérie, perceptible dans plusieurs scènes (l'attentat, la rencontre avec un colon aisé, les « enfumades » dont furent victimes les Arabes…), de rappeler que les anonymes sont trop souvent les dupes de l'histoire."
+  },
+  "chips": ["Seul en scène", "D'après Albert Camus", "Récit autobiographique", "Tout public"],
+  "note": {
+    "surtitre": "Note d'intention",
+    "titre": "Faire entendre l'intelligence de Camus",
+    "texte": "Dans notre adaptation, le prologue de l'œuvre publiée devient épilogue. Le personnage de Jacques Cormery reconstruit le récit de sa propre naissance et l'image de fin (Kaddour, le vieil Arabe, tend au colon français un morceau du sac qui le protège de la pluie) laisse entrevoir, non sans porter les traces de la subjectivité auctoriale, le rêve d'une (ré)conciliation. Pour détourner la formule de Mallarmé, la fiction vient alors « rémunérer le défaut du réel », tout en traduisant, pensons-nous, la lucidité de Camus, au moment de sa mort, quant à une résolution pacifiée du conflit.\n\nCe que tout ça dit ? Des souvenirs, l'exceptionnel parcours, les beautés et souffrances de l'enfance, le prix à payer pour l'émergence sociale, mais aussi le refus de la peine de mort, de la torture et de la guerre — de l'injustice sous toutes ses formes.\n\nEt peut-être un certain rapport au monde. Rien de théorique ou d'édifiant. Quelque chose de la complexité d'une vie. Non une fuite ou une résignation, mais une étape dans la réflexion d'un homme *solitaire et solidaire*. Contre les dogmatismes et non sans courage. Une manière de se tenir au monde, oui, et, en creux, la conviction que devant l'absurde de la condition humaine, mieux vaudrait construire collectivement, ici et maintenant, plutôt que de s'entre-déchirer.\n\nJe voudrais que ce spectacle fasse entendre l'intelligence de Camus, sa détestation de l'injustice et son goût, presque animal, pour l'existence. Que David Seigneur porte cette voix avec autant de simplicité que possible, que l'on fasse le choix d'une adresse sans affèterie, moins « efficace » que sincère. Et qu'entouré du travail de toute l'équipe, il nous emporte dans une expérience aussi sensible qu'intellectuelle.",
+    "signature": "— Patrick Roldez, adaptation et mise en scène"
+  },
+  "distribution": [
+    { "poste": "D'après", "nom": "Albert Camus" },
+    { "poste": "Adaptation & mise en scène", "nom": "Patrick Roldez" },
+    { "poste": "Interprétation", "nom": "David Seigneur" },
+    { "poste": "Scénographie", "nom": "Charlotte Maurel" },
+    { "poste": "Costumes", "nom": "Valérie Weiss" },
+    { "poste": "Lumières", "nom": "Alexandre Dujardin" },
+    { "poste": "Musiques", "nom": "David Georgelin" },
+    { "poste": "Production", "nom": "Cie Théâtre de l'eau qui dort" }
+  ],
+  "fiche": [
+    { "label": "Genre", "valeur": "Seul en scène" },
+    { "label": "Langue", "valeur": "Français" },
+    { "label": "Durée", "valeur": "À confirmer" },
+    { "label": "Public", "valeur": "Tout public" },
+    { "label": "Équipe en tournée", "valeur": "Équipe légère (interprète + régie)" },
+    { "label": "Licence", "valeur": "PLATESV-R-2023-002736" }
+  ],
+  "dates": {
+    "surtitre": "En ce moment",
+    "titre": "Festival OFF d'Avignon 2026",
+    "liste": [
+      {
+        "jour": "4→25",
+        "mois": "Juillet",
+        "annee": "2026",
+        "lieu": "Le Petit Louvre — salle Van Gogh",
+        "details": "23 rue Saint-Agricole, Avignon · 21h05 · relâche les jeudis 9, 16 et 23",
+        "statut": "Réservations : 04 32 76 02 79 · theatre-petit-louvre.fr",
+        "statutType": "open"
+      }
+    ]
+  }
+}

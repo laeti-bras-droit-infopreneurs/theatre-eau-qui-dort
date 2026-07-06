@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}" />
+  <link rel="canonical" href="{{ site.url }}/{{ canonical }}" />
+  <meta name="robots" content="{{ robots or "index, follow" }}" />
+  <meta property="og:type" content="{{ ogType or "website" }}" />
+  <meta property="og:title" content="{{ ogTitle or title }}" />
+  <meta property="og:description" content="{{ ogDescription or description }}" />
+  <meta property="og:url" content="{{ site.url }}/{{ canonical }}" />
+  <meta property="og:image" content="{{ site.url }}/{{ ogImage or "assets/img/affiche-le-premier-homme.jpg" }}" />
+  <meta property="og:locale" content="fr_FR" />
+  {% block extraMeta %}{% endblock %}
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <meta name="theme-color" content="#0c0b10" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  {% block jsonld %}{% endblock %}
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html" aria-label="Accueil — Théâtre de l'eau qui dort"><img class="brand__mark" src="assets/img/logo.svg" alt="" width="34" height="34" /><span class="brand__name">Théâtre de l'eau qui dort<span>Compagnie</span></span></a>
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+      <nav class="nav" id="nav" aria-label="Navigation principale">
+        <a href="spectacle.html"{% if navCurrent == "spectacle" %} aria-current="page"{% endif %}>Le spectacle</a>
+        <a href="autres-spectacles.html"{% if navCurrent == "autres" %} aria-current="page"{% endif %}>Autres spectacles</a>
+        <a href="equipe.html"{% if navCurrent == "equipe" %} aria-current="page"{% endif %}>L'équipe</a>
+        <a href="presse.html"{% if navCurrent == "presse" %} aria-current="page"{% endif %}>Presse</a>
+        <a class="nav-cta" href="contact.html"{% if navCurrent == "contact" %} aria-current="page"{% endif %}>Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+{% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about"><a class="brand" href="index.html"><img class="brand__mark" src="assets/img/logo.svg" alt="" width="34" height="34" /><span class="brand__name">Théâtre de l'eau qui dort<span>Compagnie</span></span></a><p>{{ reglages.descriptionCourte }}</p></div>
+        <div><h4>Explorer</h4><nav aria-label="Pied de page"><a href="spectacle.html">Le Premier Homme</a><a href="autres-spectacles.html">Autres spectacles</a><a href="equipe.html">L'équipe</a></nav></div>
+        <div><h4>Professionnels</h4><nav><a href="presse.html">Presse</a><a href="contact.html">Contact</a><a href="{{ reglages.dossierPresse }}" download>Dossier de presse (PDF)</a></nav></div>
+        <div><h4>Contact</h4><ul><li>{{ reglages.contactNom }}</li><li><a href="tel:{{ reglages.telephoneLien }}">{{ reglages.telephone }}</a></li><li><a href="mailto:{{ reglages.email }}">{{ reglages.email }}</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© <span data-year>2026</span> Théâtre de l'eau qui dort · Licence d'entrepreneur du spectacle {{ reglages.licence }}</span><span><a href="mentions-legales.html">Mentions légales</a></span></div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

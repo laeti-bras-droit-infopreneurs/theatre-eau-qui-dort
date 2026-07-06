@@ -1,0 +1,45 @@
+{
+  "intro": "Deux spectacles souvent appréciés, longuement diffusés et salués par la presse : *Oleanna* de David Mamet et *Dans la solitude des champs de coton* de Bernard-Marie Koltès.",
+  "spectacles": [
+    {
+      "surtitre": "David Mamet",
+      "titre": "« Oleanna »",
+      "description": "Un professeur d'université reçoit une étudiante venue contester sa note. De cet entretien apparemment banal, David Mamet tire un affrontement vertigineux sur le pouvoir, le langage et l'accusation. David Seigneur y incarnait le professeur.",
+      "chips": ["Théâtre contemporain", "Duo", "David Mamet"],
+      "photos": [
+        { "image": "assets/img/oleanna-1.jpg", "alt": "David Seigneur dans Oleanna de David Mamet — photo de scène" },
+        { "image": "assets/img/oleanna-2.jpg", "alt": "Photos de scène d'Oleanna de David Mamet" }
+      ],
+      "citationsTitre": "À propos d'« Oleanna »",
+      "citations": [
+        { "texte": "« Une vraie bombe à retardement. »", "media": "Le Canard enchaîné", "auteur": "— Jean-Luc Porquet" },
+        { "texte": "« Une expérience presque freudienne. »", "media": "Libération", "auteur": "— Bérénice Le Mestre" },
+        { "texte": "« Éblouissante Oleanna. »", "media": "Le Figaro", "auteur": "— Nathalie Simon" },
+        { "texte": "« Foudroyant. »", "media": "Politis", "auteur": "— Anaïs Heluin" },
+        { "texte": "« Fascinant. »", "media": "Pariscope", "auteur": "— Dimitri Denorme" },
+        { "texte": "« Un thriller d'une rare intensité dramatique. »", "media": "Le Parisien", "auteur": "— Marie-Emmanuelle Galfré" }
+      ]
+    },
+    {
+      "surtitre": "Bernard-Marie Koltès",
+      "titre": "« Dans la solitude des champs de coton »",
+      "description": "À la nuit tombée, dans un lieu indéterminé, un dealer et un client se jaugent, se cherchent et se défient. La langue somptueuse de Koltès fait de cette rencontre un duel philosophique autant que charnel. David Seigneur y incarnait le dealer.",
+      "chips": ["Théâtre contemporain", "Duo", "Koltès"],
+      "photos": [
+        { "image": "assets/img/gal-1.svg", "alt": "Photo de scène — Dans la solitude des champs de coton (à venir)" },
+        { "image": "assets/img/gal-3.svg", "alt": "Photo de scène — Dans la solitude des champs de coton (à venir)" }
+      ],
+      "citationsTitre": "À propos de « La Solitude »",
+      "citations": [
+        { "texte": "« C'est une langue de feu, un frisson de théâtre qui nous sont donnés. »", "media": "Les Trois Coups", "auteur": "— Tiphaine Pocquet du Haut-Jussé" },
+        { "texte": "« Une narration délicate ; une très belle performance. »", "media": "La Provence", "auteur": "— Marie Dumas" },
+        { "texte": "« Un théâtre éclairé et riche de résonances. »", "media": "Rueduthéâtre", "auteur": "— Aurélia Hillaire" }
+      ]
+    }
+  ],
+  "passees": {
+    "surtitre": "Également au répertoire",
+    "titre": "Les créations passées",
+    "texte": "À ses débuts, la compagnie a monté Molière, Dario Fo et deux pièces de l'écriture de Patrick Roldez — dont, en 2007, une « écriture du fragment » intitulée *Le deuxième homme*, qui faisait déjà écho à l'œuvre autofictionnelle de Camus. En 2015, la compagnie créait *Misanthrope (titre provisoire)*, un montage de textes contemporains."
+  }
+}

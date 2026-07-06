@@ -33,7 +33,18 @@
       "PowerShell(winget install --id oschwartz10612.Poppler --accept-source-agreements --accept-package-agreements --silent)",
       "PowerShell($env:Path = [Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\) + \";\" + [Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\); pdfinfo \"C:\\\\Users\\\\Laetitia\\\\Downloads\\\\Dossier Le premier homme Avignon.pdf\" | Select-Object -First 15; pdftotext -layout \"C:\\\\Users\\\\Laetitia\\\\Downloads\\\\Dossier Le premier homme Avignon.pdf\" \"C:\\\\Users\\\\Laetitia\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Laetitia-Desktop-Th-atre-eau-qui-dort\\\\b9526ff0-0ec2-4bea-bf8c-c648838e38e6\\\\scratchpad\\\\dossier.txt\")",
       "PowerShell($env:Path = [Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\) + \";\" + [Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\); $dir = \"C:\\\\Users\\\\Laetitia\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Laetitia-Desktop-Th-atre-eau-qui-dort\\\\b9526ff0-0ec2-4bea-bf8c-c648838e38e6\\\\scratchpad\\\\img\"; New-Item -ItemType Directory -Force $dir | Out-Null; pdfimages -all \"C:\\\\Users\\\\Laetitia\\\\Downloads\\\\Dossier Le premier homme Avignon.pdf\" \"$dir\\\\ext\"; Get-ChildItem $dir | Select-Object Name, Length)",
-      "PowerShell(git add -A)"
+      "PowerShell(git add -A)",
+      "PowerShell(winget install --id OpenJS.NodeJS.LTS --accept-source-agreements --accept-package-agreements --silent)",
+      "PowerShell(git mv assets src/assets)",
+      "PowerShell(git mv robots.txt src/robots.txt)",
+      "PowerShell(git mv llms.txt src/llms.txt)",
+      "PowerShell(git mv sitemap.xml src/sitemap.xml)",
+      "PowerShell(git mv site.webmanifest src/site.webmanifest)",
+      "PowerShell(git rm -q index.html spectacle.html autres-spectacles.html equipe.html presse.html contact.html mentions-legales.html)",
+      "PowerShell($env:Path = [Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\) + \";\" + [Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\); node --version; npm --version)",
+      "PowerShell($dest = \"$env:LOCALAPPDATA\\\\node-portable\"; $zip = \"$env:TEMP\\\\node.zip\"; Invoke-WebRequest -Uri \"https://nodejs.org/dist/v22.14.0/node-v22.14.0-win-x64.zip\" -OutFile $zip; Expand-Archive -Path $zip -DestinationPath $dest -Force; & \"$dest\\\\node-v22.14.0-win-x64\\\\node.exe\" --version)",
+      "PowerShell($env:Path = \"$env:LOCALAPPDATA\\\\node-portable\\\\node-v22.14.0-win-x64;\" + $env:Path; Set-Location \"C:\\\\Users\\\\Laetitia\\\\Desktop\\\\Théatre eau qui dort\"; npm install 2>&1 | Select-Object -Last 5)",
+      "PowerShell($env:Path = \"$env:LOCALAPPDATA\\\\node-portable\\\\node-v22.14.0-win-x64;\" + $env:Path; Set-Location \"C:\\\\Users\\\\Laetitia\\\\Desktop\\\\Théatre eau qui dort\"; npx eleventy 2>&1 | Select-Object -Last 15)"
     ]
   }
 }

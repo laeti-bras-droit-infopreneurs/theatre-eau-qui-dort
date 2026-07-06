@@ -1,0 +1,38 @@
+---
+title: "Mentions légales | Théâtre de l'eau qui dort"
+description: "Mentions légales du site de la compagnie Théâtre de l'eau qui dort."
+canonical: mentions-legales.html
+robots: "noindex, follow"
+permalink: mentions-legales.html
+---
+{% extends "base.njk" %}
+
+{% block content %}
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Fil d'ariane"><a href="index.html">Accueil</a><span>›</span> Mentions légales</nav>
+        <h1>Mentions légales</h1>
+      </div>
+    </section>
+    <section>
+      <div class="container container--narrow">
+        <h3>Éditeur du site</h3>
+        <div class="mt-1">{{ mentions.editeur | md | safe }}</div>
+
+        <h3 class="mt-3">Directeur de la publication</h3>
+        <div class="mt-1">{{ mentions.directeur | md | safe }}</div>
+
+        <h3 class="mt-3">Hébergement</h3>
+        <div class="mt-1">{{ mentions.hebergement | md | safe }}</div>
+
+        <h3 class="mt-3">Propriété intellectuelle</h3>
+        <div class="mt-1">{{ mentions.propriete | md | safe }}</div>
+
+        <h3 class="mt-3">Crédits photos</h3>
+        <div class="mt-1">{{ mentions.credits | md | safe }}</div>
+
+        <h3 class="mt-3">Données personnelles</h3>
+        <div class="mt-1">{{ mentions.donnees | md | safe }}</div>
+      </div>
+    </section>
+{% endblock %}

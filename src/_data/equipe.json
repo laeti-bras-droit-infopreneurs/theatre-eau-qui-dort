@@ -1,0 +1,36 @@
+{
+  "intro": "Les artistes du « Premier Homme », d'après Albert Camus.",
+  "personnes": [
+    {
+      "nom": "David Seigneur",
+      "role": "Interprétation",
+      "photo": "assets/img/team-1.svg",
+      "bio": "David était dans la Cour d'Honneur pour le *Welfare* mis en scène par Julie Deliquet en 2023. Désigné, à ses débuts, Talent Cannes ADAMI, il est l'un des fondateurs et piliers d'In Vitro et, à ce titre, a participé à tous les spectacles du collectif ces quinze dernières années — à l'exception du dernier dont la distribution est entièrement féminine. Il a également travaillé avec Elsa Granat, Aurélie Van den Daele, Joël Jouanneau, Sotigui Kouyaté ou encore Nicolas Briançon. Au cinéma, on l'a vu dans *Une petite zone de turbulence* de Michel Blanc, dans *Mesrine, l'instinct de mort* ou *La très, très grande entreprise* de Pierre Jolivet. Avec nous, il était le dealer chez Koltès et le professeur dans *Oleanna* de David Mamet."
+    },
+    {
+      "nom": "Patrick Roldez",
+      "role": "Adaptation & mise en scène",
+      "photo": "assets/img/team-2.svg",
+      "bio": "Agrégé de lettres modernes depuis 2021, Patrick revient au théâtre avec la même envie d'y faire entendre des textes essentiels. Lorsqu'il a suspendu en 2015 ses activités théâtrales, après avoir honoré tous ses engagements, il venait de monter *Misanthrope (titre provisoire)*, un montage de textes contemporains, et poursuivait la diffusion d'*Oleanna* de Mamet et *Dans la solitude des champs de coton* de Koltès, deux spectacles souvent appréciés. Il souhaite défendre un théâtre exigeant proposé à tous ; il l'a fait, à ses débuts, avec Molière, Dario Fo et deux pièces de son écriture — dont, en 2007, une « écriture du fragment » intitulée *Le deuxième homme* qui faisait déjà écho à l'œuvre autofictionnelle de Camus."
+    },
+    {
+      "nom": "Charlotte Maurel",
+      "role": "Scénographie",
+      "photo": "assets/img/team-3.svg",
+      "bio": "Formée à l'École Nationale Supérieure des Arts Décoratifs, Charlotte a, entre autres, accompagné le travail de François Duval (*Le Cul de Juda*, *Bartleby*), les débuts du Collectif In Vitro ou Anna Nozière à la Colline."
+    },
+    {
+      "nom": "Alexandre Dujardin",
+      "role": "Lumières",
+      "photo": "assets/img/team-4.svg",
+      "bio": "Alexandre est aujourd'hui le créateur lumières des derniers spectacles d'Étienne Saglio : *Monstre(s)*, *Le Bruit des loups*, *Vers les métamorphoses*, accueillis dans diverses scènes nationales et en tournée internationale. Auparavant, il signait notamment les lumières de Julien Guyomard, Philippe Person ou Vincent Colin. Il a accompagné nos dernières créations."
+    },
+    {
+      "nom": "David Georgelin",
+      "role": "Musiques",
+      "photo": "assets/img/team-5.svg",
+      "bio": "David a notamment signé les musiques du *Baal* de Brecht pour les Ateliers Berthier-Théâtre de l'Odéon et du *Père Tralalère* de Sylvain Creuzevault au Théâtre National de la Colline, un travail unanimement salué. Il a signé la musique de tous les spectacles de la Cie."
+    }
+  ],
+  "note": "Costumes : Valérie Weiss."
+}

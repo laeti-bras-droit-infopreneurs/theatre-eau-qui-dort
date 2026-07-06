@@ -1,0 +1,277 @@
+media:
+  input: src/assets/img
+  output: assets/img
+
+content:
+  - name: accueil
+    label: "Page d'accueil"
+    type: file
+    path: src/_data/accueil.json
+    fields:
+      - name: hero
+        label: "Bandeau principal"
+        type: object
+        fields:
+          - { name: surtitre, label: "Surtitre", type: string }
+          - { name: titre, label: "Titre du spectacle", type: string }
+          - { name: accroche, label: "Accroche", type: text }
+          - { name: image, label: "Image de fond", type: image }
+          - { name: imageAlt, label: "Description de l'image (accessibilité)", type: string }
+          - name: metas
+            label: "Informations clés"
+            type: object
+            list: true
+            fields:
+              - { name: label, label: "Intitulé", type: string }
+              - { name: valeur, label: "Valeur", type: string }
+      - name: troupe
+        label: "Présentation de la troupe"
+        type: object
+        fields:
+          - { name: surtitre, label: "Surtitre", type: string }
+          - { name: titre, label: "Titre", type: string }
+          - { name: texte, label: "Texte (Markdown : *italique*, **gras**, ligne vide = nouveau paragraphe)", type: text }
+          - { name: image, label: "Image", type: image }
+          - { name: imageAlt, label: "Description de l'image", type: string }
+      - name: histoire
+        label: "Histoire de la troupe"
+        type: object
+        fields:
+          - { name: surtitre, label: "Surtitre", type: string }
+          - { name: titre, label: "Titre", type: string }
+          - { name: texte, label: "Texte (Markdown)", type: text }
+      - name: citations
+        label: "Citations presse (accueil)"
+        type: object
+        fields:
+          - { name: surtitre, label: "Surtitre", type: string }
+          - { name: titre, label: "Titre", type: string }
+          - name: liste
+            label: "Citations"
+            type: object
+            list: true
+            fields:
+              - { name: texte, label: "Citation (HTML autorisé)", type: text }
+              - { name: media, label: "Média", type: string }
+              - { name: source, label: "Précision (auteur, spectacle…)", type: string }
+      - name: dates
+        label: "Dates / agenda"
+        type: object
+        fields:
+          - { name: surtitre, label: "Surtitre", type: string }
+          - { name: titre, label: "Titre", type: string }
+          - name: liste
+            label: "Dates"
+            type: object
+            list: true
+            fields:
+              - { name: jour, label: "Jour(s) (ex. 4→25)", type: string }
+              - { name: mois, label: "Mois", type: string }
+              - { name: annee, label: "Année", type: string }
+              - { name: lieu, label: "Lieu / événement", type: string }
+              - { name: details, label: "Détails (adresse, horaire…)", type: string }
+              - { name: statut, label: "Mention (ex. Places disponibles)", type: string }
+              - name: statutType
+                label: "Couleur du badge"
+                type: select
+                options:
+                  values:
+                    - { value: open, label: "Vert (disponible)" }
+                    - { value: soldout, label: "Rouge (complet)" }
+      - name: faq
+        label: "Questions fréquentes"
+        type: object
+        list: true
+        fields:
+          - { name: question, label: "Question", type: string }
+          - { name: reponse, label: "Réponse (Markdown)", type: text }
+
+  - name: spectacle
+    label: "Le spectacle (Le Premier Homme)"
+    type: file
+    path: src/_data/spectacle.json
+    fields:
+      - { name: surtitre, label: "Surtitre", type: string }
+      - { name: titre, label: "Titre", type: string }
+      - { name: epigraphe, label: "Citation d'ouverture (Markdown)", type: text }
+      - { name: affiche, label: "Affiche", type: image }
+      - { name: afficheAlt, label: "Description de l'affiche", type: string }
+      - name: intentions
+        label: "Les intentions"
+        type: object
+        fields:
+          - { name: surtitre, label: "Surtitre", type: string }
+          - { name: accroche, label: "Premier paragraphe (mis en avant)", type: text }
+          - { name: texte, label: "Suite du texte (Markdown)", type: text }
+      - name: chips
+        label: "Mots-clés"
+        type: string
+        list: true
+      - name: note
+        label: "Note d'intention"
+        type: object
+        fields:
+          - { name: surtitre, label: "Surtitre", type: string }
+          - { name: titre, label: "Titre", type: string }
+          - { name: texte, label: "Texte (Markdown)", type: text }
+          - { name: signature, label: "Signature", type: string }
+      - name: distribution
+        label: "Distribution"
+        type: object
+        list: true
+        fields:
+          - { name: poste, label: "Poste", type: string }
+          - { name: nom, label: "Nom", type: string }
+      - name: fiche
+        label: "Fiche technique"
+        type: object
+        list: true
+        fields:
+          - { name: label, label: "Intitulé", type: string }
+          - { name: valeur, label: "Valeur", type: string }
+      - name: dates
+        label: "Dates en cours"
+        type: object
+        fields:
+          - { name: surtitre, label: "Surtitre", type: string }
+          - { name: titre, label: "Titre", type: string }
+          - name: liste
+            label: "Dates"
+            type: object
+            list: true
+            fields:
+              - { name: jour, label: "Jour(s)", type: string }
+              - { name: mois, label: "Mois", type: string }
+              - { name: annee, label: "Année", type: string }
+              - { name: lieu, label: "Lieu", type: string }
+              - { name: details, label: "Détails", type: string }
+              - { name: statut, label: "Mention", type: string }
+              - name: statutType
+                label: "Couleur du badge"
+                type: select
+                options:
+                  values:
+                    - { value: open, label: "Vert (disponible)" }
+                    - { value: soldout, label: "Rouge (complet)" }
+
+  - name: autres
+    label: "Autres spectacles"
+    type: file
+    path: src/_data/autres.json
+    fields:
+      - { name: intro, label: "Introduction (Markdown)", type: text }
+      - name: spectacles
+        label: "Spectacles"
+        type: object
+        list: true
+        fields:
+          - { name: surtitre, label: "Auteur (surtitre)", type: string }
+          - { name: titre, label: "Titre", type: string }
+          - { name: description, label: "Description (Markdown)", type: text }
+          - name: chips
+            label: "Mots-clés"
+            type: string
+            list: true
+          - name: photos
+            label: "Photos de scène"
+            type: object
+            list: true
+            fields:
+              - { name: image, label: "Photo", type: image }
+              - { name: alt, label: "Description (accessibilité)", type: string }
+          - { name: citationsTitre, label: "Titre du bloc citations", type: string }
+          - name: citations
+            label: "Citations presse"
+            type: object
+            list: true
+            fields:
+              - { name: texte, label: "Citation", type: text }
+              - { name: media, label: "Média", type: string }
+              - { name: auteur, label: "Auteur", type: string }
+      - name: passees
+        label: "Créations passées"
+        type: object
+        fields:
+          - { name: surtitre, label: "Surtitre", type: string }
+          - { name: titre, label: "Titre", type: string }
+          - { name: texte, label: "Texte (Markdown)", type: text }
+
+  - name: equipe
+    label: "L'équipe"
+    type: file
+    path: src/_data/equipe.json
+    fields:
+      - { name: intro, label: "Introduction", type: text }
+      - name: personnes
+        label: "Membres de l'équipe"
+        type: object
+        list: true
+        fields:
+          - { name: nom, label: "Nom", type: string }
+          - { name: role, label: "Rôle", type: string }
+          - { name: photo, label: "Photo", type: image }
+          - { name: bio, label: "Biographie (Markdown : *titre d'œuvre* = italique)", type: text }
+      - { name: note, label: "Note complémentaire (ex. costumes)", type: string }
+
+  - name: presse
+    label: "Page presse"
+    type: file
+    path: src/_data/presse.json
+    fields:
+      - { name: intro, label: "Introduction", type: text }
+      - name: dossier
+        label: "Bloc dossier de presse"
+        type: object
+        fields:
+          - { name: surtitre, label: "Surtitre", type: string }
+          - { name: titre, label: "Titre", type: string }
+          - { name: texte, label: "Texte", type: text }
+          - { name: carteTitre, label: "Titre de la carte de téléchargement", type: string }
+          - { name: carteMeta, label: "Sous-titre de la carte (format, poids)", type: string }
+          - { name: note, label: "Note (crédits visuels…)", type: text }
+      - name: revue
+        label: "Bloc revue de presse"
+        type: object
+        fields:
+          - { name: titre, label: "Titre", type: string }
+          - { name: texte, label: "Texte", type: text }
+
+  - name: contactPage
+    label: "Page contact"
+    type: file
+    path: src/_data/contactPage.json
+    fields:
+      - { name: surtitre, label: "Surtitre", type: string }
+      - { name: titre, label: "Titre", type: string }
+      - { name: intro, label: "Introduction", type: text }
+      - { name: formulaireEmail, label: "Email qui reçoit le formulaire", type: string }
+
+  - name: reglages
+    label: "Réglages (contacts, licence)"
+    type: file
+    path: src/_data/reglages.json
+    fields:
+      - { name: descriptionCourte, label: "Description courte (pied de page)", type: string }
+      - { name: contactNom, label: "Nom du contact diffusion", type: string }
+      - { name: telephone, label: "Téléphone (affiché)", type: string }
+      - { name: telephoneLien, label: "Téléphone (format lien, ex. +33610740492)", type: string }
+      - { name: email, label: "Email de la compagnie", type: string }
+      - { name: licence, label: "Licence d'entrepreneur du spectacle", type: string }
+      - { name: dossierPresse, label: "Chemin du dossier de presse (PDF)", type: string }
+      - { name: presseNom, label: "Contact presse — nom", type: string }
+      - { name: presseStructure, label: "Contact presse — structure", type: string }
+      - { name: presseTelephone, label: "Contact presse — téléphone (affiché)", type: string }
+      - { name: presseTelephoneLien, label: "Contact presse — téléphone (lien)", type: string }
+      - { name: presseEmail, label: "Contact presse — email", type: string }
+
+  - name: mentions
+    label: "Mentions légales"
+    type: file
+    path: src/_data/mentions.json
+    fields:
+      - { name: editeur, label: "Éditeur du site (Markdown)", type: text }
+      - { name: directeur, label: "Directeur de la publication", type: text }
+      - { name: hebergement, label: "Hébergement", type: text }
+      - { name: propriete, label: "Propriété intellectuelle", type: text }
+      - { name: credits, label: "Crédits photos", type: text }
+      - { name: donnees, label: "Données personnelles", type: text }

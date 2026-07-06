@@ -6,3 +6,6 @@ desktop.ini
 .vscode/
 .idea/
 *.swp
+# Build Eleventy
+node_modules/
+_site/

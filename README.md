@@ -1,43 +1,36 @@
 # Site — Théâtre de l'eau qui dort
 
-Site vitrine statique (HTML/CSS/JS, sans outil de build) pour la diffusion du spectacle **« Le Premier Homme »**, d'après Albert Camus, de la Cie l'eau qui dort. Conçu pour les **programmateurs** (centres culturels, festivals, direction de programmation), avec **SEO** et **GEO** (optimisation pour les moteurs génératifs type ChatGPT/Perplexity) travaillés.
+Site vitrine pour la diffusion du spectacle **« Le Premier Homme »**, d'après Albert Camus, de la Cie l'eau qui dort. Conçu pour les **programmateurs** (centres culturels, festivals, direction de programmation), avec **SEO** et **GEO** (optimisation pour les moteurs génératifs type ChatGPT/Perplexity) travaillés.
 
 Site en ligne : https://laeti-bras-droit-infopreneurs.github.io/theatre-eau-qui-dort/
 
----
-
-## 1. Ouvrir le site
-Double-cliquez sur **`index.html`** — il s'ouvre dans votre navigateur. Aucune installation nécessaire.
+Le site est généré avec **[Eleventy](https://www.11ty.dev)** et **administrable sans toucher au code** via **[Pages CMS](https://pagescms.org)**.
 
 ---
 
-## 2. Ce qu'il reste à personnaliser
+## 1. Administrer le site (modifier textes, photos, dates)
 
-Tout ce qui est à personnaliser est balisé dans le code par le commentaire **`À REMPLACER`**.
-Ouvrez les fichiers `.html` dans un éditeur de texte et cherchez `À REMPLACER` (Ctrl+F).
+1. Allez sur **https://app.pagescms.org** et connectez-vous **avec votre compte GitHub** (le compte doit avoir accès au dépôt — voir ci-dessous).
+2. Choisissez le dépôt `theatre-eau-qui-dort`.
+3. Le menu de gauche liste les contenus : *Page d'accueil, Le spectacle, Autres spectacles, L'équipe, Presse, Contact, Réglages, Mentions légales*.
+4. Modifiez, puis cliquez **Save** : le site se met à jour automatiquement en ~1 minute.
 
-### Textes
-| Info | Fichier(s) |
-|---|---|
-| Présentation de la troupe + son histoire (actuellement lorem ipsum) | `index.html` |
-| Durée du spectacle, fiche technique | `spectacle.html` |
-| Compléments sur Oleanna / La Solitude (années, distribution) | `autres-spectacles.html` |
-| Email réel de la compagnie (placeholder `diffusion@theatredeleauquidort.fr`) | tous les pieds de page + `contact.html` |
-| Mentions légales (forme juridique, siège, SIRET) | `mentions-legales.html` |
+**Donner accès à quelqu'un** (ex. Patrick) : il crée un compte gratuit sur github.com, puis vous l'invitez : dépôt GitHub → *Settings* → *Collaborators* → *Add people* (rôle **Write**).
 
-### Photos
-Déposez vos images dans **`assets/img/`** :
-- `hero-le-premier-homme.jpg` → visuel d'accueil (déjà en place : portrait Camus © IZIS/Roger-Viollet)
-- `affiche-le-premier-homme.jpg` → affiche du spectacle (déjà en place)
-- `oleanna-1.jpg`, `oleanna-2.jpg` → photos de scène d'Oleanna (déjà en place, basse définition — à remplacer par des HD si possible)
-- `gal-1.svg`, `gal-3.svg` → à remplacer par les photos de La Solitude des champs de coton (`autres-spectacles.html`)
-- `team-1.svg` … `team-5.svg` → portraits de l'équipe (Seigneur, Roldez, Maurel, Dujardin, Georgelin)
+**Champs « Markdown »** : ligne vide = nouveau paragraphe, `*texte*` = *italique*, `**texte**` = **gras**.
 
-> Formats conseillés : **JPG** ou **WebP**, optimisés (< 400 Ko).
+---
 
-### Documents téléchargeables
-Le dossier de presse réel est en place : `assets/downloads/dossier-presse-le-premier-homme.pdf`.
-Les autres PDF placeholder (`fiche-technique.pdf`, etc.) ne sont plus liés depuis les pages — remplacez-les ou supprimez-les.
+## 2. Ce qu'il reste à personnaliser (via l'admin)
+
+- Présentation de la troupe + son histoire (actuellement lorem ipsum) → *Page d'accueil*
+- Durée du spectacle → *Le spectacle* → Fiche technique
+- Photos de l'équipe (placeholders `team-1.svg`…`team-5.svg`) → *L'équipe*
+- Photos de *La Solitude des champs de coton* → *Autres spectacles*
+- Email réel de la compagnie (placeholder `diffusion@theatredeleauquidort.fr`) → *Réglages* + *Page contact*
+- Mentions légales (forme juridique, siège, SIRET) → *Mentions légales*
+
+> Photos : formats conseillés **JPG** ou **WebP**, optimisés (< 400 Ko).
 
 ---
 
@@ -56,7 +49,14 @@ Pour recevoir les demandes automatiquement par email, créez un compte gratuit s
 ---
 
 ## 5. Hébergement & déploiement
-Le site est hébergé sur **GitHub Pages** : chaque `git push` sur la branche `main` redéploie automatiquement le site (~1 min) via GitHub Actions (`.github/workflows/deploy-pages.yml`).
+Le site est hébergé sur **GitHub Pages** : chaque `git push` sur la branche `main` (y compris les sauvegardes Pages CMS) reconstruit le site avec Eleventy et le redéploie (~1-2 min) via GitHub Actions (`.github/workflows/deploy-pages.yml`).
+
+### Développement local (optionnel, pour les techniciens)
+```
+npm install
+npm start        # serveur local avec rechargement auto
+npm run build    # génère le site dans _site/
+```
 
 ---
 
@@ -72,19 +72,18 @@ Le site est hébergé sur **GitHub Pages** : chaque `git push` sur la branche `m
 
 ## 7. Structure des fichiers
 ```
-index.html               Accueil (hero, présentation troupe, histoire, dates, presse, FAQ)
-spectacle.html           « Le Premier Homme » — intentions, distribution, Avignon 2026
-autres-spectacles.html   Oleanna & La Solitude des champs de coton + revue de presse
-equipe.html              Les artistes (bios du dossier de presse)
-presse.html              Contact presse (La Strada & Cies) + dossier de presse PDF
-contact.html             Formulaire + coordonnées (Patrick Roldez)
-mentions-legales.html    Mentions légales
-assets/css/style.css     Design (couleurs, typo) — tout est centralisé ici
-assets/js/main.js        Menu mobile, galerie, formulaire
-assets/img/              Images (affiche, photos, logo)
-assets/downloads/        Dossier de presse PDF
-sitemap.xml, robots.txt, llms.txt, site.webmanifest   Fichiers SEO/GEO
+.pages.yml               Configuration de l'interface d'admin (Pages CMS)
+.eleventy.js             Configuration du générateur Eleventy
+src/_data/               ★ TOUT LE CONTENU (fichiers JSON édités par le CMS)
+src/_includes/base.njk   Gabarit commun (en-tête, menu, pied de page)
+src/*.njk                Les pages (accueil, spectacle, autres-spectacles, équipe, presse, contact)
+src/assets/css/style.css Design (couleurs, typo) — tout est centralisé ici
+src/assets/js/main.js    Menu mobile, galerie, formulaire
+src/assets/img/          Images (affiche, photos, logo)
+src/assets/downloads/    Dossier de presse PDF
+src/sitemap.xml, robots.txt, llms.txt   Fichiers SEO/GEO
+_site/                   Site généré (ne pas modifier, reconstruit à chaque build)
 ```
 
 ## 8. Changer les couleurs / la typo
-Tout est en haut de `assets/css/style.css`, section `:root` (variables `--gold`, `--ink`, etc.). Modifiez une valeur, elle se répercute sur tout le site.
+Tout est en haut de `src/assets/css/style.css`, section `:root` (variables `--gold`, `--ink`, etc.). Modifiez une valeur, elle se répercute sur tout le site.

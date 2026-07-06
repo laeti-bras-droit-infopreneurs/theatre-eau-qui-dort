@@ -1,0 +1,88 @@
+---
+title: "Contact — Programmer le spectacle | Théâtre de l'eau qui dort"
+description: "Contactez la compagnie Théâtre de l'eau qui dort pour programmer « Le Premier Homme » : demande de date, devis de diffusion, dossier de presse. Réponse sous 48h pour les programmateurs."
+canonical: contact.html
+ogTitle: "Contact — Théâtre de l'eau qui dort"
+ogDescription: "Demande de date, devis et informations diffusion."
+navCurrent: contact
+permalink: contact.html
+---
+{% extends "base.njk" %}
+
+{% block jsonld %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact — Théâtre de l'eau qui dort",
+    "url": "{{ site.url }}/contact.html",
+    "mainEntity": {
+      "@type": "PerformingGroup",
+      "name": "Théâtre de l'eau qui dort",
+      "email": "{{ reglages.email }}",
+      "telephone": "{{ reglages.telephoneLien }}",
+      "employee": { "@type": "Person", "name": "{{ reglages.contactNom }}", "jobTitle": "Direction artistique" }
+    }
+  }
+  </script>
+{% endblock %}
+
+{% block content %}
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Fil d'ariane"><a href="index.html">Accueil</a><span>›</span> Contact</nav>
+        <span class="eyebrow">{{ contactPage.surtitre }}</span>
+        <h1>{{ contactPage.titre }}</h1>
+        <p>{{ contactPage.intro }}</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container split" style="align-items:start;">
+        <!-- Formulaire -->
+        <div class="reveal">
+          <h2 class="mb-2">Demande de diffusion</h2>
+          <form class="form" data-mailto="{{ contactPage.formulaireEmail }}" action="mailto:{{ contactPage.formulaireEmail }}" method="post" enctype="text/plain">
+            <div class="row">
+              <div class="field"><label for="nom">Nom &amp; prénom *</label><input id="nom" name="nom" type="text" required /></div>
+              <div class="field"><label for="structure">Structure / lieu *</label><input id="structure" name="structure" type="text" required /></div>
+            </div>
+            <div class="row">
+              <div class="field">
+                <label for="fonction">Fonction</label>
+                <select id="fonction" name="fonction">
+                  <option>Directeur·rice de centre culturel</option>
+                  <option>Directeur·rice artistique de festival</option>
+                  <option>Responsable de programmation</option>
+                  <option>Presse / journaliste</option>
+                  <option>Autre</option>
+                </select>
+              </div>
+              <div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" required /></div>
+            </div>
+            <div class="field"><label for="telephone">Téléphone</label><input id="telephone" name="telephone" type="tel" /></div>
+            <div class="field"><label for="message">Votre message *</label><textarea id="message" name="message" required placeholder="Période envisagée, jauge de votre salle, questions…"></textarea></div>
+            <div><button class="btn btn--primary" type="submit">Envoyer la demande <span class="btn__arrow">→</span></button></div>
+            <p class="post-meta">* Champs obligatoires. Vos données ne sont utilisées que pour répondre à votre demande.</p>
+          </form>
+        </div>
+
+        <!-- Coordonnées -->
+        <div class="reveal">
+          <h2 class="mb-2">Coordonnées</h2>
+          <ul class="contact-info">
+            <li><span class="label">Diffusion</span><span>{{ reglages.contactNom }}<br /><a href="tel:{{ reglages.telephoneLien }}">{{ reglages.telephone }}</a></span></li>
+            <li><span class="label">Email</span><span><a href="mailto:{{ reglages.email }}">{{ reglages.email }}</a></span></li>
+            <li><span class="label">Presse</span><span>{{ reglages.presseNom }} — {{ reglages.presseStructure }}<br /><a href="tel:{{ reglages.presseTelephoneLien }}">{{ reglages.presseTelephone }}</a> · <a href="mailto:{{ reglages.presseEmail }}">{{ reglages.presseEmail }}</a></span></li>
+            <li><span class="label">Licence</span><span>Entrepreneur du spectacle {{ reglages.licence }}</span></li>
+          </ul>
+
+          <div class="pro-banner mt-3">
+            <h3 style="font-size:1.4rem;">Besoin des documents tout de suite ?</h3>
+            <p class="mt-1">Le dossier de presse du « Premier Homme » est téléchargeable directement.</p>
+            <a class="btn btn--ghost mt-2" href="{{ reglages.dossierPresse }}" download>Télécharger le dossier de presse <span class="btn__arrow">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}
