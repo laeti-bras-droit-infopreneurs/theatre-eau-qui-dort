@@ -12,7 +12,28 @@
       "Bash(git add *)",
       "Bash(git -c core.autocrlf=true commit -q -m 'Site vitrine — Théâtre de l'\\\\''eau qui dort *)",
       "Bash(git credential-manager *)",
-      "Bash(git credential-manager-core *)"
+      "Bash(git credential-manager-core *)",
+      "PowerShell(try { \\(Get-Command gh -ErrorAction Stop\\).Source } catch { \"gh absent\" })",
+      "PowerShell(winget install --id GitHub.cli --accept-source-agreements --accept-package-agreements --silent)",
+      "PowerShell(git add theatre.md)",
+      "PowerShell(& \"C:\\\\Program Files\\\\GitHub CLI\\\\gh.exe\" auth login --hostname github.com --git-protocol https --web --skip-ssh-key)",
+      "PowerShell(& \"C:\\\\Program Files\\\\GitHub CLI\\\\gh.exe\" api repos/laeti-bras-droit-infopreneurs/theatre-eau-qui-dort/pages/builds/latest --jq '.status')",
+      "PowerShell(try { \\(Invoke-WebRequest -Uri \"https://laeti-bras-droit-infopreneurs.github.io/theatre-eau-qui-dort/\" -UseBasicParsing -Method Head\\).StatusCode } catch { $_.Exception.Response.StatusCode.value__ })",
+      "PowerShell(& \"C:\\\\Program Files\\\\GitHub CLI\\\\gh.exe\" api repos/laeti-bras-droit-infopreneurs/theatre-eau-qui-dort/pages --jq '{status: .status, html_url: .html_url, build_type: .build_type}')",
+      "PowerShell(& \"C:\\\\Program Files\\\\GitHub CLI\\\\gh.exe\" api repos/laeti-bras-droit-infopreneurs/theatre-eau-qui-dort/pages/builds/latest --jq '{status: .status, error: .error.message, created: .created_at, duration: .duration}')",
+      "PowerShell(& \"C:\\\\Program Files\\\\GitHub CLI\\\\gh.exe\" api repos/laeti-bras-droit-infopreneurs/theatre-eau-qui-dort/pages/builds -X POST)",
+      "PowerShell(& \"C:\\\\Program Files\\\\GitHub CLI\\\\gh.exe\" api repos/laeti-bras-droit-infopreneurs/theatre-eau-qui-dort/pages/builds/latest --jq '.created_at')",
+      "PowerShell(& \"C:\\\\Program Files\\\\GitHub CLI\\\\gh.exe\" api repos/laeti-bras-droit-infopreneurs/theatre-eau-qui-dort/pages -X PUT -f build_type=workflow)",
+      "PowerShell(git add .github)",
+      "PowerShell(git push)",
+      "PowerShell(git config --get-all credential.helper)",
+      "PowerShell(git config --global --get-all credential.helper)",
+      "PowerShell(git config --global credential.https://github.com.helper \"!'C:/Program Files/GitHub CLI/gh.exe' auth git-credential\")",
+      "PowerShell(& \"C:\\\\Program Files\\\\GitHub CLI\\\\gh.exe\" api repos/laeti-bras-droit-infopreneurs/theatre-eau-qui-dort/pages --jq '.build_type')",
+      "PowerShell(winget install --id oschwartz10612.Poppler --accept-source-agreements --accept-package-agreements --silent)",
+      "PowerShell($env:Path = [Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\) + \";\" + [Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\); pdfinfo \"C:\\\\Users\\\\Laetitia\\\\Downloads\\\\Dossier Le premier homme Avignon.pdf\" | Select-Object -First 15; pdftotext -layout \"C:\\\\Users\\\\Laetitia\\\\Downloads\\\\Dossier Le premier homme Avignon.pdf\" \"C:\\\\Users\\\\Laetitia\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Laetitia-Desktop-Th-atre-eau-qui-dort\\\\b9526ff0-0ec2-4bea-bf8c-c648838e38e6\\\\scratchpad\\\\dossier.txt\")",
+      "PowerShell($env:Path = [Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\) + \";\" + [Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\); $dir = \"C:\\\\Users\\\\Laetitia\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Laetitia-Desktop-Th-atre-eau-qui-dort\\\\b9526ff0-0ec2-4bea-bf8c-c648838e38e6\\\\scratchpad\\\\img\"; New-Item -ItemType Directory -Force $dir | Out-Null; pdfimages -all \"C:\\\\Users\\\\Laetitia\\\\Downloads\\\\Dossier Le premier homme Avignon.pdf\" \"$dir\\\\ext\"; Get-ChildItem $dir | Select-Object Name, Length)",
+      "PowerShell(git add -A)"
     ]
   }
 }

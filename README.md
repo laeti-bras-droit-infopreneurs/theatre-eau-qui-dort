@@ -1,48 +1,43 @@
 # Site — Théâtre de l'eau qui dort
 
-Site vitrine statique (HTML/CSS/JS, sans outil de build) pour la diffusion du spectacle de la compagnie. Conçu pour les **programmateurs** (centres culturels, festivals, direction de programmation), avec **SEO** et **GEO** (optimisation pour les moteurs génératifs type ChatGPT/Perplexity) travaillés.
+Site vitrine statique (HTML/CSS/JS, sans outil de build) pour la diffusion du spectacle **« Le Premier Homme »**, d'après Albert Camus, de la Cie l'eau qui dort. Conçu pour les **programmateurs** (centres culturels, festivals, direction de programmation), avec **SEO** et **GEO** (optimisation pour les moteurs génératifs type ChatGPT/Perplexity) travaillés.
+
+Site en ligne : https://laeti-bras-droit-infopreneurs.github.io/theatre-eau-qui-dort/
 
 ---
 
 ## 1. Ouvrir le site
 Double-cliquez sur **`index.html`** — il s'ouvre dans votre navigateur. Aucune installation nécessaire.
 
-> Astuce : pour naviguer entre les pages sans accroc, mieux vaut le servir localement (voir §5) ou le mettre en ligne.
-
 ---
 
-## 2. Où mettre VOTRE contenu
+## 2. Ce qu'il reste à personnaliser
 
 Tout ce qui est à personnaliser est balisé dans le code par le commentaire **`À REMPLACER`**.
-Ouvrez les fichiers `.html` dans un éditeur de texte (Bloc-notes, VS Code, TextEdit…) et cherchez `À REMPLACER` (Ctrl+F).
+Ouvrez les fichiers `.html` dans un éditeur de texte et cherchez `À REMPLACER` (Ctrl+F).
 
 ### Textes
 | Info | Fichier(s) |
 |---|---|
-| Nom du spectacle « Le Titre du Spectacle » | Tous les fichiers (chercher `Le Titre du Spectacle`) |
-| Accroche / pitch | `index.html`, `spectacle.html` |
-| Synopsis, note d'intention, distribution, fiche technique | `spectacle.html` |
-| Dates de tournée | `agenda.html` (+ le bloc `JSON-LD` en haut) |
-| Citations & articles presse | `presse.html`, `index.html` |
-| Actualités | `actualite.html` |
-| Membres de l'équipe & partenaires | `equipe.html` |
-| Coordonnées (email, téléphone, adresse) | **tous** les pieds de page + `contact.html` + `mentions-legales.html` |
-| Mentions légales (SIRET, licences, hébergeur) | `mentions-legales.html` |
+| Présentation de la troupe + son histoire (actuellement lorem ipsum) | `index.html` |
+| Durée du spectacle, fiche technique | `spectacle.html` |
+| Compléments sur Oleanna / La Solitude (années, distribution) | `autres-spectacles.html` |
+| Email réel de la compagnie (placeholder `diffusion@theatredeleauquidort.fr`) | tous les pieds de page + `contact.html` |
+| Mentions légales (forme juridique, siège, SIRET) | `mentions-legales.html` |
 
 ### Photos
-Déposez vos images dans **`assets/img/`** puis remplacez les fichiers `.svg` d'exemple :
-- `hero.svg` → grande photo de scène d'accueil (paysage, ~1600 px de large)
-- `poster.svg` → affiche du spectacle (portrait)
-- `gal-1.svg` … `gal-6.svg` → galerie photos (`photos.html`)
-- `team-1.svg` … `team-4.svg` → portraits de l'équipe
-- `actu-1.svg` … `actu-3.svg` → visuels d'actualités
-- `og-image.svg` → image d'aperçu quand on partage le lien sur les réseaux (1200×630 px)
+Déposez vos images dans **`assets/img/`** :
+- `hero-le-premier-homme.jpg` → visuel d'accueil (déjà en place : portrait Camus © IZIS/Roger-Viollet)
+- `affiche-le-premier-homme.jpg` → affiche du spectacle (déjà en place)
+- `oleanna-1.jpg`, `oleanna-2.jpg` → photos de scène d'Oleanna (déjà en place, basse définition — à remplacer par des HD si possible)
+- `gal-1.svg`, `gal-3.svg` → à remplacer par les photos de La Solitude des champs de coton (`autres-spectacles.html`)
+- `team-1.svg` … `team-5.svg` → portraits de l'équipe (Seigneur, Roldez, Maurel, Dujardin, Georgelin)
 
-> Le plus simple : nommez vos images exactement pareil (ex. `hero.jpg`) et changez l'extension dans le code (`hero.svg` → `hero.jpg`). Formats conseillés : **JPG** ou **WebP**, optimisés (< 400 Ko).
+> Formats conseillés : **JPG** ou **WebP**, optimisés (< 400 Ko).
 
-### Documents téléchargeables (dossier de presse, etc.)
-Remplacez les PDF placeholder dans **`assets/downloads/`** en gardant **les mêmes noms** :
-`dossier-de-presse.pdf`, `dossier-artistique.pdf`, `fiche-technique.pdf`, `fiche-de-diffusion.pdf`, `communique-de-presse.pdf`, `visuels-hd.zip`.
+### Documents téléchargeables
+Le dossier de presse réel est en place : `assets/downloads/dossier-presse-le-premier-homme.pdf`.
+Les autres PDF placeholder (`fiche-technique.pdf`, etc.) ne sont plus liés depuis les pages — remplacez-les ou supprimez-les.
 
 ---
 
@@ -54,52 +49,40 @@ Le logo (`assets/img/logo.svg`) et le favicon (`assets/img/favicon.svg`) sont de
 ## 4. Faire fonctionner le formulaire de contact
 Par défaut, le bouton « Envoyer » **ouvre le logiciel mail** du visiteur avec un message pré-rempli (aucun serveur requis).
 
-Pour recevoir les demandes automatiquement par email, créez un compte gratuit sur **[Formspree](https://formspree.io)** (ou utilisez **Netlify Forms** si vous hébergez sur Netlify), puis dans `contact.html` :
+Pour recevoir les demandes automatiquement par email, créez un compte gratuit sur **[Formspree](https://formspree.io)**, puis dans `contact.html` :
 1. Remplacez `action="mailto:..."` par l'URL Formspree (`action="https://formspree.io/f/VOTRE_ID"` + `method="POST"`).
-2. Supprimez l'attribut `data-mailto` du `<form>` (il désactive le comportement mailto).
+2. Supprimez l'attribut `data-mailto` du `<form>`.
 
 ---
 
-## 5. Mettre le site en ligne (hébergement)
-Le site étant statique, l'hébergement est **simple et souvent gratuit** :
-- **Netlify** ou **Vercel** : glissez-déposez le dossier → site en ligne en 1 min.
-- **OVH / Infomaniak / o2switch** : envoyez les fichiers par FTP dans le dossier `www`.
-
-Aperçu en local (si Node.js est installé) :
-```
-npx serve .
-```
+## 5. Hébergement & déploiement
+Le site est hébergé sur **GitHub Pages** : chaque `git push` sur la branche `main` redéploie automatiquement le site (~1 min) via GitHub Actions (`.github/workflows/deploy-pages.yml`).
 
 ---
 
-## 6. SEO & GEO — à faire après la mise en ligne
-Le site est déjà optimisé (balises `<title>`/`description` uniques, Open Graph, données structurées **JSON-LD** Schema.org, `sitemap.xml`, `robots.txt`, `llms.txt`, HTML sémantique, FAQ). Il reste à :
-
-1. **Remplacer le domaine** `https://theatredeleauquidort.fr` par votre vrai domaine — partout (chercher-remplacer global dans tous les `.html`, `sitemap.xml`, `robots.txt`, `llms.txt`).
+## 6. SEO & GEO — à faire
+1. **Remplacer le domaine** `https://theatredeleauquidort.fr` par le vrai domaine — partout (chercher-remplacer global dans tous les `.html`, `sitemap.xml`, `robots.txt`, `llms.txt`).
 2. Déclarer le site sur **[Google Search Console](https://search.google.com/search-console)** et y soumettre `sitemap.xml`.
-3. Mettre à jour le bloc **JSON-LD** de `agenda.html` à chaque nouvelle date (les moteurs affichent les événements).
+3. Mettre à jour le bloc **JSON-LD** de `spectacle.html` à chaque nouvelle série de dates.
 4. Vérifier les données structurées avec le **[test des résultats enrichis Google](https://search.google.com/test/rich-results)**.
-5. Renseigner vos réseaux sociaux dans le JSON-LD de `index.html` (champ `sameAs`).
-6. **GEO** : le fichier `llms.txt` et la FAQ de l'accueil aident ChatGPT/Perplexity à citer la compagnie. Gardez-y des infos factuelles à jour (jauge, durée, disponibilités, contact).
+5. Renseigner les réseaux sociaux dans le JSON-LD de `index.html` (champ `sameAs`).
+6. **GEO** : le fichier `llms.txt` et la FAQ de l'accueil aident ChatGPT/Perplexity à citer la compagnie. Gardez-y des infos factuelles à jour.
 
 ---
 
 ## 7. Structure des fichiers
 ```
-index.html            Accueil (hero, pitch, presse, dates, espace pro, FAQ)
-spectacle.html        Synopsis, note d'intention, distribution, fiche technique
-agenda.html           Dates de tournée (filtrable)
-photos.html           Galerie (avec agrandissement)
-actualite.html        Actualités de la compagnie
-presse.html           Revue de presse + dossier de presse
-equipe.html           La compagnie et les artistes
-contact.html          Formulaire + coordonnées diffusion
-diffusion.html        ESPACE PRO — tous les téléchargements + conditions
-mentions-legales.html Mentions légales
-assets/css/style.css  Design (couleurs, typo) — tout est centralisé ici
-assets/js/main.js     Menu mobile, galerie, filtres, formulaire
-assets/img/           Images (logo, photos)
-assets/downloads/     Documents PDF/ZIP téléchargeables
+index.html               Accueil (hero, présentation troupe, histoire, dates, presse, FAQ)
+spectacle.html           « Le Premier Homme » — intentions, distribution, Avignon 2026
+autres-spectacles.html   Oleanna & La Solitude des champs de coton + revue de presse
+equipe.html              Les artistes (bios du dossier de presse)
+presse.html              Contact presse (La Strada & Cies) + dossier de presse PDF
+contact.html             Formulaire + coordonnées (Patrick Roldez)
+mentions-legales.html    Mentions légales
+assets/css/style.css     Design (couleurs, typo) — tout est centralisé ici
+assets/js/main.js        Menu mobile, galerie, formulaire
+assets/img/              Images (affiche, photos, logo)
+assets/downloads/        Dossier de presse PDF
 sitemap.xml, robots.txt, llms.txt, site.webmanifest   Fichiers SEO/GEO
 ```
 
